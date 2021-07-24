@@ -8,7 +8,7 @@ import urllib
 
 from engine.core import *
 from engine.wordpress import *
-from thread_engine import ThreadEngine
+from engine.thread_engine import ThreadEngine
 
 class Brute_Engine:
 	def __init__(self, wordpress, brute, usernames, users_list, passwords_list):
