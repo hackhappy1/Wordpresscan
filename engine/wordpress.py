@@ -84,26 +84,25 @@ class Wordpress:
 
 			if 'location' in r.headers:
 
-	  			# Install is not complete
+				# Install is not complete
 				if "wp-admin/install.php" in r.headers['location']:
 					print(critical("The Website is not fully configured and currently in install mode. Call it to create a new admin user."))
 					exit()
 
-				# Redirect
 				print(notice("The remote host tried to redirect to: %s" % r.headers['location']))
-	  			user_input = str(raw_input("[?] Do you want to follow the redirection ? [Y]es [N]o, "))
+				user_input = str(raw_input("[?] Do you want to follow the redirection ? [Y]es [N]o, "))
 
-	  			if user_input.lower() == "y":
-	  				self.url = r.headers['location']
+				if user_input.lower() == "y":
+					self.url = r.headers['location']
 
-	  			else:
-	  				print(critical("Redirection not followed - End of the scan !"))
-	  				exit()
+				else:
+					print(critical("Redirection not followed - End of the scan !"))
+					exit()
 
 		except Exception as e:
 			print(e)
 			print(critical("Website down!"))
-	  		exit()
+			exit()
 
 
 	"""
