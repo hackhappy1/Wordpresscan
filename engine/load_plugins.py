@@ -6,7 +6,7 @@ import json
 import os
 import imp
 
-from wordpress import *
+from engine.wordpress import *
 
 class Load_Plugins:
 	plugin_folder = "./plugins"
