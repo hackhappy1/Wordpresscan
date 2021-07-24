@@ -52,7 +52,7 @@ class Wordpress:
 		if self.agent != "random_agent":
 			self.agent = "Wordpresscan - For educational purpose only !"
 		else:
-			with open('database/user-agents.txt','r') as f:
+			with open('database/user-agents.txt','r', encoding="latin-1") as f:
 				uas = f.read()
 
 				# remove '#SOMETHING' and '\n\n'

@@ -102,7 +102,7 @@ class Scan_Engine:
 	"""
 	def list_wp_version_vulnerabilities(self, wordpress, file):
 		# Load json file
-		with open('database/'+file+'.json') as data_file:
+		with open('database/'+file+'.json', encoding="latin-1") as data_file:
 			data = json.load(data_file)
 
 		# Try to get a close result if the version is not in the list
@@ -204,7 +204,7 @@ class Scan_Engine:
 		print(notice("Enumerating themes from aggressive detection ..."))
 
 		# Load json file
-		with open('database/themes.json') as data_file:
+		with open('database/themes.json', encoding="latin-1") as data_file:
 			data = json.load(data_file)
 
 			# Run through every themes
@@ -225,7 +225,7 @@ class Scan_Engine:
 		print(notice("Enumerating plugins from aggressive detection ..."))
 
 		# Load json file
-		with open('database/plugins.json') as data_file:
+		with open('database/plugins.json', encoding="latin-1") as data_file:
 			data = json.load(data_file)
 
 			# Run through every plugin
