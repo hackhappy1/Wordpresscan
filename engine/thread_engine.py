@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from threading import Thread
 # from time import sleep
-from core import critical, info
+from engine.core import critical, info
 
 
 class ThreadEngine(object):
