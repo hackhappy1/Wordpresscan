@@ -82,7 +82,7 @@ class Wordpress:
 		try:
 			r = requests.get(self.url, allow_redirects=False, headers={"User-Agent":self.agent} , verify=False)
 
-	  		if 'location' in r.headers:
+			if 'location' in r.headers:
 
 	  			# Install is not complete
 				if "wp-admin/install.php" in r.headers['location']:
