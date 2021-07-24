@@ -6,7 +6,7 @@ import json
 
 from tornado import ioloop, httpclient
 from engine.core import *
-from wordpress import *
+from engine.wordpress import *
 from lxml import etree
 from multiprocessing import Process, Pool
 
