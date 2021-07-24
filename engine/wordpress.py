@@ -87,9 +87,9 @@ class Wordpress:
 	  			# Install is not complete
 				if "wp-admin/install.php" in r.headers['location']:
 					print(critical("The Website is not fully configured and currently in install mode. Call it to create a new admin user."))
-		  			exit()
+					exit()
 
-		  		# Redirect
+				# Redirect
 	  			print(notice("The remote host tried to redirect to: %s" % r.headers['location']))
 	  			user_input = str(raw_input("[?] Do you want to follow the redirection ? [Y]es [N]o, "))
 
