@@ -4,7 +4,7 @@ import requests
 import re
 import json
 from random import randint
-from core import *
+from engine.core import *
 
 class Wordpress:
 	url     = "http://wp-example.com"
