@@ -5,8 +5,8 @@ import re
 import json
 
 from tornado import ioloop, httpclient
-from core import *
-from wordpress import *
+from engine.core import *
+from engine.wordpress import *
 from lxml import etree
 from multiprocessing import Process, Pool
 

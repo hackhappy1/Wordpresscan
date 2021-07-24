@@ -6,8 +6,8 @@ import json
 import os
 import urllib
 
-from core import *
-from wordpress import *
+from engine.core import *
+from engine.wordpress import *
 from thread_engine import ThreadEngine
 
 class Brute_Engine:
