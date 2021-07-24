@@ -90,7 +90,7 @@ class Wordpress:
 					exit()
 
 				# Redirect
-	  			print(notice("The remote host tried to redirect to: %s" % r.headers['location']))
+				print(notice("The remote host tried to redirect to: %s" % r.headers['location']))
 	  			user_input = str(raw_input("[?] Do you want to follow the redirection ? [Y]es [N]o, "))
 
 	  			if user_input.lower() == "y":
