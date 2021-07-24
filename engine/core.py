@@ -99,7 +99,7 @@ def download_raw_file(url, filename, verbosity):
     source = requests.get( url, stream=True).raw
 
     # Write the file
-    with open( filename, 'wb+', encoding="latin-1") as ddl_file:
+    with open( filename, 'wb+') as ddl_file:
       progress = 0
       while True:
           length = 16*1024
