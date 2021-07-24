@@ -39,7 +39,7 @@ class Brute_Engine:
 
 					print(notice("Bruteforcing detected users: "))
 					for user in wordpress.users:
-						print info("User found "+ user['slug'])
+						print(info("User found "+ user['slug']))
 						self.bruteforcing_pass(wordpress, user['slug'], passwords_list)
 
 
