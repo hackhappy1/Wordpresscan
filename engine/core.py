@@ -48,7 +48,7 @@ name        : unzip_file()
 description : unzip a file, used for user-agents.txt and timthumbs.txt
 """
 def unzip_file(filename):
-  with open(filename, 'r') as f:
+  with open(filename, 'r', encoding="latin-1") as f:
     data = f.read()
 
     # Check for a buggy .gz
